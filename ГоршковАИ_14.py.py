@@ -57,11 +57,13 @@ def process_rivers():
         volume = float(item[1])
         fill_time = float(item[2])
         creation_year = item[3]
+        lengh = item[4]
         rivers.append({
             'название': name, 
             'объем': volume, 
             'время наполнения': fill_time, 
-            'год создания': creation_year
+            'год создания': creation_year,
+            'длина реки': lengh
         })
     
     return rivers
@@ -121,6 +123,7 @@ def display_all_data():
         print(f"  Объем: {river['объем']} м³")
         print(f"  Время наполнения: {river['время наполнения']} ч")
         print(f"  Год создания: {river['год создания']}")
+        print(f"  Длина реки: {river['длина реки']}")
         print("-" * 30)
     
     print("\n" + "=" * 50)
